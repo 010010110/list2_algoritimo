@@ -12,6 +12,7 @@ void num07();
 void num08();
 void num09();
 void num10();
+void num11();
 
 int main(){
   int exercicio;
@@ -22,44 +23,59 @@ int main(){
   
   switch(exercicio){
     case (1):
+      linha();
       printf("Exercicío 1: \n");
       num01();
     break;
     case(2):
+      linha();
       printf("Exercicío 2:\n");
       num02();
     break;
     case(3):
+      linha();
       printf("Exercicio 3:\n");
       num03();
     break;
     case(4):
+      linha();
       printf("Exercicio 4:\n");
       num04();
     break;
     case(5):
+      linha();
       printf("Exercicio 5:\n");
       num05();
     break;
     case(6):
+      linha();
       printf("Exercicio 6:\n");
       num06();
     break;
     case(7):
+      linha();
       printf("Exercicio 7:\n");
       num07();
     break;
     case(8):
+      linha();
       printf("Exercicio 8:\n");
       num08();
     break;
     case(9):
+      linha();
       printf("Exercicio 9:\n");
       num09();
     break;
     case(10):
+      linha();
       printf("Exercicio 10:\n");
       num10();
+    break;
+    case(11):
+      linha();
+      printf("Exercicio 11:\n");
+      num11();
     break;
     default:
       printf("Exercicio não encontrado ou não terminado :) \n");
@@ -245,4 +261,25 @@ int main(){
         printf("Reprovado | conceito D\n");
     else printf("Reporvado | conceito E\n");
   }
+  
+  void num11(){
+    int lados;
+    float tamanho;
+    printf("Informe o numero de lados\n");
+    scanf("%d", &lados);
+    if (lados < 3) {
+      printf("Não é um Poligono\n");
+      return;
+    }
+    printf("Informe a medida dos lados:\n");
+    scanf("%f", &tamanho);
+    if (lados == 3)
+      printf("TRIANGULO\n Perímentro igual a: %.2f\n", tamanho+tamanho+tamanho);
+    else if(lados == 4)
+      printf("QUADRADO | Area igual a: %.2f\n", tamanho*tamanho);
+    else if(lados == 5)
+      printf("PENTAGONO\n");
+    else printf("Valor de lados não suportado\n");
+  }
+
   
