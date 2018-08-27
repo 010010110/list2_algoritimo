@@ -11,6 +11,7 @@ void num06();
 void num07();
 void num08();
 void num09();
+void num10();
 
 int main(){
   int exercicio;
@@ -55,6 +56,10 @@ int main(){
     case(9):
       printf("Exercicio 9:\n");
       num09();
+    break;
+    case(10):
+      printf("Exercicio 10:\n");
+      num10();
     break;
     default:
       printf("Exercicio não encontrado ou não terminado :) \n");
@@ -216,5 +221,28 @@ int main(){
        printf("O reajuste foi de: %f\n", salario*0.04);
      }
      else  printf("O salario do funcionario %f não teve reajuste.\n", fun_num);   
+  }
+
+  void num10(){
+    int id;
+    float nota1, nota2, nota3, MA, m;
+    printf("Informe o numero de identificação do aluno: \n");
+    scanf("%d", &id);
+    printf("Informe as 3 notas obtidas pelo aluno: \n");
+    scanf("%f %f %f", &nota1, &nota2, &nota3);
+    m = (nota1+nota2+nota3)/3;
+    MA = (nota1+(nota2*2)+(nota3*3)+m)/7;
+    linha();
+    printf("O aluno %d teve as notas %.2f %.2f %.2f \n", id, nota1, nota2, nota3);
+    printf("A media das notas é %.2f e a média de aproveitamento é %.2f \n", m,MA);
+    if(MA >= 90)
+        printf("Aprovado| conceito A\n");
+      else if ((MA < 90) && (MA >= 75))
+        printf("Aprovado | conceito B\n");
+      else if((MA < 75) && (MA >= 60))
+        printf("Aprovado | conceito C");
+      else if((MA < 60) && (MA >= 40))
+        printf("Reprovado | conceito D\n");
+    else printf("Reporvado | conceito E\n");
   }
   
